@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean class="com.spring.core.autowire.annotation.qualifire.Company"
+		name="company">
+		<property name="name" value="Datasoft" />
+		<property name="address" value="Shyamoli" />
+	</bean>
+
+	<bean class="com.spring.core.autowire.annotation.qualifire.Company"
+		name="secondCompany">
+		<property name="name" value="Durbar" />
+		<property name="address" value="Banani" />
+	</bean>
+
+
+	<bean class="com.spring.core.autowire.annotation.qualifire.Company"
+		name="ThirdCompany">
+		<property name="name" value="Project X" />
+		<property name="address" value="Mohakhali" />
+	</bean>
+
+
+	<bean class="com.spring.core.autowire.annotation.qualifire.Employee"
+		name="employee" />
+
+</beans>

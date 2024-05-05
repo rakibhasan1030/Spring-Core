@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Stand alone list -->
+	<util:list list-class="java.util.LinkedList"
+		id="universityFriends">
+		<value>Khalid</value>
+		<value>Fahim</value>
+		<value>Himel</value>
+		<value>Rezvee</value>
+		<value>Sayem</value>
+	</util:list>
+	
+	<util:map map-class="java.util.HashMap" id="inrolledCourses">
+		<entry key="Java" value="15000" />
+		<entry key="Kotlin" value="20000" />
+		<entry key="Android" value="30000" />
+	</util:map>
+	
+	<util:properties id="dbConfig">
+		<prop key="driver">com.mysql.jdbc.Driver</prop>
+		<prop key="url">mysql:jdbc:localhost:1030/database</prop>
+		<prop key="username">rakibhasan</prop>
+		<prop key="password">rakibhasan1030</prop>
+	</util:properties>
+
+	<bean class="com.spring.core.standalone.collections.Person"
+		name="personOne">
+		<property name="universityFriends" ref="universityFriends" />
+		<property name="inrolledCourses" ref="inrolledCourses" />
+		<property name="properties" ref="dbConfig"/>
+	</bean>
+
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

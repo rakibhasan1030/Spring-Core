@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- first bean -->
+	<bean class="com.spring.core.reference.Battary" name="battaryRef">
+		<property name="model" value = "04FFAJH745"/>
+		<property name="capacity" value = "65 Watt"/>
+	</bean>
+	
+	<!-- second bean -->
+	<bean class="com.spring.core.reference.Mobile" name="mobileRef">
+		<property name="name" value = "Google Pixel"/>
+		<property name="battaryInfo">
+			<ref bean="battaryRef"/>
+		</property>
+	</bean>
+
+</beans>
